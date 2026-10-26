@@ -1,0 +1,6 @@
+line,code,severity,title,detail,recommendation
+4,duplicate,warning,Registro exatamente duplicado,Exact row duplicate of line 3,Revise a ingestão antes de remover duplicações.
+6,invalid_coordinate,error,Coordenada inválida ou indisponível,lat=91,"Confira a ordem, as unidades e os valores AIS de posição indisponível."
+7,missing_field,error,Campo obrigatório ausente,lat,Revise a origem; não preencha valores por suposição.
+7,invalid_coordinate,error,Coordenada inválida ou indisponível,lon=181,"Confira a ordem, as unidades e os valores AIS de posição indisponível."
+8,invalid_timestamp,error,Horário inválido ou sem fuso,not-a-date,Confira ISO 8601 e fuso; use assume-utc apenas se a origem documentar UTC.

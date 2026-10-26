@@ -1,0 +1,5 @@
+csv_line,issue_codes,mmsi,timestamp,lat,lon,original_record_json
+4,duplicate,999000001,2026-01-01T12:05:00Z,'-23.96,'-46.31,"{""mmsi"": ""999000001"", ""timestamp"": ""2026-01-01T12:05:00Z"", ""lat"": ""-23.96"", ""lon"": ""-46.31""}"
+6,invalid_coordinate,999000002,2026-01-01T12:00:00Z,91,'-46.30,"{""mmsi"": ""999000002"", ""timestamp"": ""2026-01-01T12:00:00Z"", ""lat"": ""91"", ""lon"": ""-46.30""}"
+7,invalid_coordinate|missing_field,999000002,2026-01-01T12:05:00Z,,181,"{""mmsi"": ""999000002"", ""timestamp"": ""2026-01-01T12:05:00Z"", ""lat"": """", ""lon"": ""181""}"
+8,invalid_timestamp,999000003,not-a-date,'-23.95,'-46.30,"{""mmsi"": ""999000003"", ""timestamp"": ""not-a-date"", ""lat"": ""-23.95"", ""lon"": ""-46.30""}"

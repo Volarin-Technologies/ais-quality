@@ -1,0 +1,31 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "mode": "base, synthetic valid rows, analysis plus all exports; peak RSS includes input generation",
+  "results": [
+    {
+      "rows": 10000,
+      "input_bytes": 499024,
+      "analysis_seconds": 0.146,
+      "export_seconds": 0.075,
+      "peak_rss_mib": 37.9,
+      "flagged_rows": 0
+    },
+    {
+      "rows": 50000,
+      "input_bytes": 2495024,
+      "analysis_seconds": 0.885,
+      "export_seconds": 0.411,
+      "peak_rss_mib": 135.3,
+      "flagged_rows": 0
+    },
+    {
+      "rows": 100000,
+      "input_bytes": 4990024,
+      "analysis_seconds": 1.775,
+      "export_seconds": 0.757,
+      "peak_rss_mib": 259.1,
+      "flagged_rows": 0
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "language": "pt",
+  "settings": {
+    "max_speed_knots": 60,
+    "max_jump_nm": 20,
+    "assume_utc": false,
+    "max_rows": 100000,
+    "max_bytes": 100000000
+  },
+  "movement_segments": [
+    {
+      "mmsi": "999000001",
+      "line": 3,
+      "previous_line": 2,
+      "timestamp": "2026-01-01T12:05:00+00:00",
+      "interval_minutes": 5.0,
+      "distance_nm": 0.8133540411534218,
+      "speed_knots": 9.760248493841063,
+      "speed_change_knots": 0.0,
+      "turn_degrees": 0.0
+    }
+  ],
+  "ml": {
+    "status": "disabled",
+    "alerts": [],
+    "scored_segments": []
+  },
+  "version": "0.4.0",
+  "column_mapping": {
+    "mmsi": "mmsi",
+    "timestamp": "timestamp",
+    "lat": "lat",
+    "lon": "lon"
+  },
+  "vessels": [
+    {
+      "mmsi": "999000001",
+      "total_rows": 4,
+      "flagged_rows": 1,
+      "unique_timestamps": 3,
+      "first_timestamp": "2026-01-01T12:00:00+00:00",
+      "last_timestamp": "2026-01-01T13:00:00+00:00",
+      "gap_count": 1
+    },
+    {
+      "mmsi": "999000002",
+      "total_rows": 2,
+      "flagged_rows": 2,
+      "unique_timestamps": 2,
+      "first_timestamp": "2026-01-01T12:00:00+00:00",
+      "last_timestamp": "2026-01-01T12:05:00+00:00",
+      "gap_count": 0
+    },
+    {
+      "mmsi": "999000003",
+      "total_rows": 1,
+      "flagged_rows": 1,
+      "unique_timestamps": 0,
+      "first_timestamp": null,
+      "last_timestamp": null,
+      "gap_count": 0
+    }
+  ],
+  "flagged_records": [
+    {
+      "line": 4,
+      "values": {
+        "mmsi": "999000001",
+        "timestamp": "2026-01-01T12:05:00Z",
+        "lat": "-23.96",
+        "lon": "-46.31"
+      },
+      "original": {
+        "mmsi": "999000001",
+        "timestamp": "2026-01-01T12:05:00Z",
+        "lat": "-23.96",
+        "lon": "-46.31"
+      },
+      "issue_codes": [
+        "duplicate"
+      ]
+    },
+    {
+      "line": 6,
+      "values": {
+        "mmsi": "999000002",
+        "timestamp": "2026-01-01T12:00:00Z",
+        "lat": "91",
+        "lon": "-46.30"
+      },
+      "original": {
+        "mmsi": "999000002",
+        "timestamp": "2026-01-01T12:00:00Z",
+        "lat": "91",
+        "lon": "-46.30"
+      },
+      "issue_codes": [
+        "invalid_coordinate"
+      ]
+    },
+    {
+      "line": 7,
+      "values": {
+        "mmsi": "999000002",
+        "timestamp": "2026-01-01T12:05:00Z",
+        "lat": "",
+        "lon": "181"
+      },
+      "original": {
+        "mmsi": "999000002",
+        "timestamp": "2026-01-01T12:05:00Z",
+        "lat": "",
+        "lon": "181"
+      },
+      "issue_codes": [
+        "invalid_coordinate",
+        "missing_field"
+      ]
+    },
+    {
+      "line": 8,
+      "values": {
+        "mmsi": "999000003",
+        "timestamp": "not-a-date",
+        "lat": "-23.95",
+        "lon": "-46.30"
+      },
+      "original": {
+        "mmsi": "999000003",
+        "timestamp": "not-a-date",
+        "lat": "-23.95",
+        "lon": "-46.30"
+      },
+      "issue_codes": [
+        "invalid_timestamp"
+      ]
+    }
+  ],
+  "source_columns": [
+    "mmsi",
+    "timestamp",
+    "lat",
+    "lon"
+  ],
+  "source": "sample.csv",
+  "total_rows": 7,
+  "flagged_rows": 4,
+  "rows_without_flags": 3,
+  "gap_threshold_minutes": 30,
+  "counts": {
+    "duplicate": 1,
+    "invalid_coordinate": 2,
+    "missing_field": 1,
+    "invalid_timestamp": 1
+  },
+  "issues": [
+    {
+      "line": 4,
+      "code": "duplicate",
+      "detail": "Exact row duplicate of line 3",
+      "severity": "warning",
+      "title": "Registro exatamente duplicado",
+      "recommendation": "Revise a ingestão antes de remover duplicações."
+    },
+    {
+      "line": 6,
+      "code": "invalid_coordinate",
+      "detail": "lat=91",
+      "severity": "error",
+      "title": "Coordenada inválida ou indisponível",
+      "recommendation": "Confira a ordem, as unidades e os valores AIS de posição indisponível."
+    },
+    {
+      "line": 7,
+      "code": "missing_field",
+      "detail": "lat",
+      "severity": "error",
+      "title": "Campo obrigatório ausente",
+      "recommendation": "Revise a origem; não preencha valores por suposição."
+    },
+    {
+      "line": 7,
+      "code": "invalid_coordinate",
+      "detail": "lon=181",
+      "severity": "error",
+      "title": "Coordenada inválida ou indisponível",
+      "recommendation": "Confira a ordem, as unidades e os valores AIS de posição indisponível."
+    },
+    {
+      "line": 8,
+      "code": "invalid_timestamp",
+      "detail": "not-a-date",
+      "severity": "error",
+      "title": "Horário inválido ou sem fuso",
+      "recommendation": "Confira ISO 8601 e fuso; use assume-utc apenas se a origem documentar UTC."
+    }
+  ],
+  "gaps": [
+    {
+      "mmsi": "999000001",
+      "start": "2026-01-01T12:05:00+00:00",
+      "end": "2026-01-01T13:00:00+00:00",
+      "minutes": 55.0
+    }
+  ]
+}

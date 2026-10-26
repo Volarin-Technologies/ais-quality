@@ -1,0 +1,4 @@
+mmsi,total_rows,flagged_rows,unique_timestamps,first_timestamp,last_timestamp,gap_count
+999000001,4,1,3,2026-01-01T12:00:00+00:00,2026-01-01T13:00:00+00:00,1
+999000002,2,2,2,2026-01-01T12:00:00+00:00,2026-01-01T12:05:00+00:00,0
+999000003,1,1,0,,,0

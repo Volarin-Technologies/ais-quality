@@ -1,0 +1,2 @@
+# Optional; validated with scikit-learn 1.8.0. Basic mode has no dependencies.
+scikit-learn>=1.5,<2

@@ -1,0 +1,9 @@
+line,code,severity,title,detail,recommendation
+82,speed_exceeded,warning,Velocidade estimada acima do limite,previous_line=81; interval_minutes=4.91922; distance_nm=48.2161; speed_knots=588.094; threshold_knots=60,Revise as duas posições e horários; ajuste o limite à embarcação e operação.
+82,position_jump,warning,Deslocamento acima do limite,previous_line=81; interval_minutes=4.91922; distance_nm=48.2161; speed_knots=588.094; threshold_nm=20,Revise as extremidades do segmento. Distância elevada não comprova erro.
+83,speed_exceeded,warning,Velocidade estimada acima do limite,previous_line=82; interval_minutes=5.43471; distance_nm=47.8636; speed_knots=528.421; threshold_knots=60,Revise as duas posições e horários; ajuste o limite à embarcação e operação.
+83,position_jump,warning,Deslocamento acima do limite,previous_line=82; interval_minutes=5.43471; distance_nm=47.8636; speed_knots=528.421; threshold_nm=20,Revise as extremidades do segmento. Distância elevada não comprova erro.
+262,speed_exceeded,warning,Velocidade estimada acima do limite,previous_line=261; interval_minutes=5.33214; distance_nm=30.201; speed_knots=339.837; threshold_knots=60,Revise as duas posições e horários; ajuste o limite à embarcação e operação.
+262,position_jump,warning,Deslocamento acima do limite,previous_line=261; interval_minutes=5.33214; distance_nm=30.201; speed_knots=339.837; threshold_nm=20,Revise as extremidades do segmento. Distância elevada não comprova erro.
+263,speed_exceeded,warning,Velocidade estimada acima do limite,previous_line=262; interval_minutes=5.00887; distance_nm=29.849; speed_knots=357.553; threshold_knots=60,Revise as duas posições e horários; ajuste o limite à embarcação e operação.
+263,position_jump,warning,Deslocamento acima do limite,previous_line=262; interval_minutes=5.00887; distance_nm=29.849; speed_knots=357.553; threshold_nm=20,Revise as extremidades do segmento. Distância elevada não comprova erro.

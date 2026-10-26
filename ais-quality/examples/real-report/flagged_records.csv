@@ -1,0 +1,2 @@
+csv_line,issue_codes,mmsi,timestamp,lat,lon,original_record_json
+4758,position_jump|speed_exceeded,367373000,2024-01-01 00:01:05,28.66156,'-89.55153,"{""mmsi"": ""367373000"", ""base_date_time"": ""2024-01-01 00:01:05"", ""longitude"": ""-89.55153"", ""latitude"": ""28.66156"", ""sog"": ""0.0"", ""cog"": ""33.1"", ""heading"": ""22"", ""vessel_name"": ""WD143 SHELL RIG"", ""imo"": """", ""call_sign"": ""WDE5894"", ""vessel_type"": ""37"", ""status"": """", ""length"": ""100"", ""width"": """", ""draft"": """", ""cargo"": ""10"", ""transceiver"": ""A""}"

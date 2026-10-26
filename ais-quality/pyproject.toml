@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "volarin-ais-quality"
+version = "0.4.0"
+description = "Local AIS CSV auditing with optional exploratory anomaly detection"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Volarin Technologies"}]
+dependencies = []
+classifiers = ["Development Status :: 4 - Beta", "Programming Language :: Python :: 3", "Topic :: Scientific/Engineering :: GIS"]
+
+[project.optional-dependencies]
+ml = ["scikit-learn>=1.5,<2"]
+
+[project.scripts]
+ais-quality = "ais_quality:main"
+
+[tool.setuptools]
+py-modules = ["ais_quality", "ais_ml", "ais_report"]
